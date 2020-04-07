@@ -58,86 +58,21 @@
 
 
 
-// let repEle=document.createElement("h3");
-// repEle.className="repClass";
-// repEle.id="repId";
-// repEle.innerHTML="Replaced Item";
-// console.log(repEle);
+let repEle=document.createElement("h3");
+repEle.className="repClass";
+repEle.id="repId";
+repEle.innerHTML="Replaced Item";
+console.log(repEle);
 
-// let repIns=document.querySelector("#card3")
-// console.log(repIns);
-// repIns.replaceWith(repEle)
-
-
-// document.querySelector('#headId').addEventListener("click",function(e) {
-//     console.log('you have clicked the heading');
-//     console.log(e);
-// })
+let repIns=document.querySelector("#card3")
+console.log(repIns);
+repIns.replaceWith(repEle)
 
 
-
-// let btn=document.getElementById('inputButton');
-// btn.addEventListener('click',func1);
-// btn.addEventListener('dblclick',func2);
-
-
-// function func1(e)
-// {
-//     console.log("Its a Click",e.target);
-
-// }
-// function func2(e)
-// {
-//     console.log('Its a Double Click',e.offsetX);
-// }
-
-
-
-// let c=document.getElementsByClassName('container');
-// console.log(Array.from(c));
-
-
-
-
-
-
-let divEle = document.createElement('div');
-let val = localStorage.getItem('text');
-let text;
-if (val == null)
-{
-    text = document.createTextNode('This is Editable text. Click to edit.');
-}
-else
-{
-    text = document.createTextNode(val);
-}
-
-divEle.appendChild(text);
-divEle.setAttribute("id", "elem");
-divEle.setAttribute("class", "elem");
-divEle.setAttribute("style", "border: 2px solid green; width: 400px; height: 100px; margin: 34px padding: 23px ");
-
-let container = document.querySelector('.bigContainer');
-let first = document.getElementById('para-3');
-// console.log(first);
-container.insertBefore(divEle, first);
-// console.log(divEle);
-
-divEle.addEventListener('click', function () {
-    let noTextAreas = document.getElementsByClassName('textarea').length;
-    if (noTextAreas == 0) {
-        let html = elem.innerHTML;
-        divEle.innerHTML = `<textarea class="form-control textarea" id="textArea" rows="3" style="margin: 7px; width: 94%;">${html}</textarea>
-        `
-    }
-    let textArea = document.getElementById('textArea');
-    textArea.addEventListener('blur',function(){
-        elem.innerHTML = textArea.value;
-        localStorage.setItem('text',elem.innerHTML)
-
-    })
-});
+document.querySelector('#headId').addEventListener("click",function(e) {
+    console.log('you have clicked the heading');
+    console.log(e);
+})
 
 
 
