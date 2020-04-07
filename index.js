@@ -76,68 +76,26 @@
 
 
 
-// let btn=document.getElementById('inputButton');
-// btn.addEventListener('click',func1);
-// btn.addEventListener('dblclick',func2);
+let btn=document.getElementById('inputButton');
+btn.addEventListener('click',func1);
+btn.addEventListener('dblclick',func2);
 
 
-// function func1(e)
-// {
-//     console.log("Its a Click",e.target);
-
-// }
-// function func2(e)
-// {
-//     console.log('Its a Double Click',e.offsetX);
-// }
-
-
-
-// let c=document.getElementsByClassName('container');
-// console.log(Array.from(c));
-
-
-
-
-
-
-let divEle = document.createElement('div');
-let val = localStorage.getItem('text');
-let text;
-if (val == null)
+function func1(e)
 {
-    text = document.createTextNode('This is Editable text. Click to edit.');
+    console.log("Its a Click",e.target);
+
 }
-else
+function func2(e)
 {
-    text = document.createTextNode(val);
+    console.log('Its a Double Click',e.offsetX);
 }
 
-divEle.appendChild(text);
-divEle.setAttribute("id", "elem");
-divEle.setAttribute("class", "elem");
-divEle.setAttribute("style", "border: 2px solid green; width: 400px; height: 100px; margin: 34px padding: 23px ");
 
-let container = document.querySelector('.bigContainer');
-let first = document.getElementById('para-3');
-// console.log(first);
-container.insertBefore(divEle, first);
-// console.log(divEle);
 
-divEle.addEventListener('click', function () {
-    let noTextAreas = document.getElementsByClassName('textarea').length;
-    if (noTextAreas == 0) {
-        let html = elem.innerHTML;
-        divEle.innerHTML = `<textarea class="form-control textarea" id="textArea" rows="3" style="margin: 7px; width: 94%;">${html}</textarea>
-        `
-    }
-    let textArea = document.getElementById('textArea');
-    textArea.addEventListener('blur',function(){
-        elem.innerHTML = textArea.value;
-        localStorage.setItem('text',elem.innerHTML)
+let c=document.getElementsByClassName('container');
+console.log(Array.from(c));
 
-    })
-});
 
 
 
